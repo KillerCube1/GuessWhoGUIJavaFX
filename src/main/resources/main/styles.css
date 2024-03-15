@@ -11,3 +11,21 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
     -fx-cursor: hand;
 }
+
+
+.custom-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.custom-button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.custom-button:pressed {
+    -fx-background-color: #d0d0d0;
+}
