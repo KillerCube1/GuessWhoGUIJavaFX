@@ -1,0 +1,13 @@
+.styled-button {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 13px;
+    -fx-border-color: white;
+    -fx-border-width: 4px;
+    -fx-border-insets: -2px;
+    -fx-background-color: linear-gradient(to bottom, #FF6A00, #FF0000);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
