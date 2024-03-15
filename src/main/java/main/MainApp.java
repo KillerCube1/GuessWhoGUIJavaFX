@@ -4,6 +4,8 @@ import javafx.animation.*;
 import javafx.application.Application;
 //import javafx.fxml.FXMLLoader;
 //import javafx.scene.Parent;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -18,22 +20,18 @@ import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Stop;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import main.elements.ScrollingBackground;
 
 import java.io.IOException;
 
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        // Load the image
-        Image backgroundImage = new Image(getClass().getResourceAsStream("/images/Background.png"));
-
-        // Create ImageView and set the image
-        Rectangle background = new Rectangle();
-        background.widthProperty().bind(stage.widthProperty());
-        background.heightProperty().bind(stage.heightProperty());
-
         // Create a button
         Button button = new Button("Click Me");
 
@@ -64,6 +62,13 @@ public class MainApp extends Application {
         // Create a layout pane and add the button to it
         StackPane root = new StackPane();
 
+        Text bottomRightText = new Text("Version 2.0");
+        bottomRightText.setFill(Color.WHITE);
+        bottomRightText.setFont(Font.font("Arial", FontWeight.BOLD, 15));
+
+        StackPane.setAlignment(bottomRightText, Pos.BOTTOM_RIGHT);
+        StackPane.setMargin(bottomRightText, new Insets(0, 10, 10, 0));
+
         Stop[] stops = new Stop[]{
                 new Stop(0, Color.rgb(0, 224, 245)),
                 new Stop(1, Color.rgb(0, 106, 220))
@@ -75,8 +80,9 @@ public class MainApp extends Application {
         // Set the background to the root pane
         root.setBackground(Background.fill(gradient));
 
-        root.getChildren().add(background);
+        root.getChildren().add(new ScrollingBackground(stage, "/images/Background.png", 1.5));
         root.getChildren().add(button);
+        root.getChildren().add(bottomRightText);
 
         Scene scene = new Scene(root, 800, 700);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
@@ -86,19 +92,6 @@ public class MainApp extends Application {
         stage.setFullScreenExitHint("");
         stage.setFullScreen(true);
         stage.show();
-
-        // stage.getWidth() / backgroundImage.getWidth()
-
-        final double[] x = {0};
-        new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-                ImagePattern imagePattern = new ImagePattern(backgroundImage, -x[0], x[0], 0.25, 0.25, true);
-                background.setFill(imagePattern);
-                x[0] += 0.0005;
-                if (x[0] >= 100) x[0] = 0;
-            }
-        }.start();
     }
 
     public static void main(String[] args) {
