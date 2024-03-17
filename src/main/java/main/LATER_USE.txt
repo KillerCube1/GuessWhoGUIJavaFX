@@ -1,0 +1,27 @@
+// Create a button
+        Button button = new Button("Click Me");
+
+        // Create a scale transition for button growth
+        ScaleTransition scaleTransitionGrow = new ScaleTransition(Duration.millis(200), button);
+        scaleTransitionGrow.setToX(1.1);
+        scaleTransitionGrow.setToY(1.1);
+
+        // Create a scale transition for button shrink
+        ScaleTransition scaleTransitionShrink = new ScaleTransition(Duration.millis(200), button);
+        scaleTransitionShrink.setToX(1);
+        scaleTransitionShrink.setToY(1);
+
+        ScaleTransition scaleTransitionClick = new ScaleTransition(Duration.millis(50), button);
+        scaleTransitionClick.setToX(1);
+        scaleTransitionClick.setToY(1);
+
+        // Registering mouse events to trigger the scale transitions
+        button.setOnMouseEntered(event -> scaleTransitionGrow.play());
+        button.setOnMouseExited(event -> scaleTransitionShrink.play());
+        button.setOnMousePressed(event -> scaleTransitionClick.play());
+        button.setOnMouseReleased(event -> scaleTransitionGrow.play());
+        button.setOnMouseClicked(event -> StyledButtonController.handleButtonClick() );
+
+        // Apply CSS styling to the button
+        button.getStyleClass().add("styled-button");
+        root.getChildren().add(button);

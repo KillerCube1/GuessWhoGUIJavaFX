@@ -40,7 +40,7 @@ public class ScrollingBackground extends Rectangle {
                 setFill(imagePattern);
 
                 // Increment
-                x[0] += 0.0005;
+                x[0] += 0.0001;
                 if (x[0] >= 100) x[0] = 0.0;
             }
         }.start();
