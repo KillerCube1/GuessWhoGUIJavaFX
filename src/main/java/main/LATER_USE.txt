@@ -1,3 +1,6 @@
+scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+
+
 // Create a button
         Button button = new Button("Click Me");
 
