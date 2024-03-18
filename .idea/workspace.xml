@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="Major changes including:&#10;- New Logo and Icon for game&#10;- New Loading text&#10;- New Font (matches logo)&#10;- Window is freely resizable and doesn't break the game!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/LoadResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/assets/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/scenes/Loading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/scenes/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/LATER_USE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/LATER_USE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/LoadResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/LoadResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/scenes/Loading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/scenes/Loading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/Background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +44,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damien Perkins/IdeaProjects/GuessWhoGUIJavaFX/src/main/resources/images&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GameGUI.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Damien Perkins/IdeaProjects/GuessWhoGUIJavaFX/src/main/resources/images"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damien Perkins\IdeaProjects\GuessWhoGUIJavaFX\src\main\resources\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\20036081\IdeaProjects\GuessWhoGUIJavaFX\src\main\resources\main" />
+      <recent name="C:\Users\20036081\IdeaProjects\GuessWhoGUIJavaFX\src\main\java\main" />
       <recent name="C:\Users\Damien Perkins\IdeaProjects\GuessWhoGUIJavaFX\src\main\resources\fonts" />
       <recent name="C:\Users\Damien Perkins\IdeaProjects\GuessWhoGUIJavaFX\src\main\resources\main" />
     </key>

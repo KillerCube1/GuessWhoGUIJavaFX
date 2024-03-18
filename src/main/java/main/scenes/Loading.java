@@ -85,7 +85,7 @@ public class Loading extends Screen{
         blackScreen.heightProperty().bind(MainApp.getStage().heightProperty());
         blackScreen.setOpacity(1);
 
-        root.getChildren().add(new ScrollingBackground(MainApp.getStage(), "/images/Background.png", 1.5));
+        root.getChildren().add(new ScrollingBackground(MainApp.getStage(), "/main/Background.png", 1.5));
         root.getChildren().add(loadingLayout);
         root.getChildren().add(bottomRightText);
 

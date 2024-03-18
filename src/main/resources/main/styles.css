@@ -1,3 +1,9 @@
+.root {
+    -fx-background-image: url('Background.png');
+    -fx-background-size: cover;
+    -fx-background-color:  #87CEEB;
+}
+
 .styled-button {
     -fx-border-radius: 10px;
     -fx-background-radius: 13px;
@@ -12,20 +18,28 @@
     -fx-cursor: hand;
 }
 
-
 .custom-button {
-    -fx-background-color: #f0f0f0;
-    -fx-text-fill: #333333;
+    -fx-min-width: 130px;
+    -fx-min-height: 50px;
+    -fx-max-width: 130px;
+    -fx-max-height: 50px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-background-color: #87CEEB;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
     -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 0);
+    -fx-border-color: white;
+    -fx-border-width: 3px;
     -fx-padding: 10px 20px;
-    -fx-border-color: #cccccc;
-    -fx-border-radius: 5px;
 }
 
 .custom-button:hover {
-    -fx-background-color: #e0e0e0;
+    -fx-background-color: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
 }
 
-.custom-button:pressed {
-    -fx-background-color: #d0d0d0;
-}

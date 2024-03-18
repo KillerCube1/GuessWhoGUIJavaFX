@@ -13,7 +13,7 @@ public class LoadResources {
             System.out.println("started loading..");
             try {
                 Thread.sleep(1000);
-                updateLoadingText(loadingText, "Totally Loading Stuff");
+                updateLoadingText(loadingText, "BOOTKAS TAKING ALL RESOURCES");
                 Thread.sleep(1000);
 
                 Platform.runLater(() -> MainApp.setScreen("Loading"));
