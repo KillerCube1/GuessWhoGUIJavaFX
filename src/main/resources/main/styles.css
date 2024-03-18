@@ -37,9 +37,10 @@
     -fx-padding: 10px 20px;
 }
 
-.custom-button:hover {
-    -fx-background-color: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+.custom-button:hover  {
+    -fx-background-color: linear-gradient(#87CEEB, #FFFFFF);
     -fx-text-fill: black;
+    -fx-font-weight: bold;
     -fx-font-size: 14px;
 }
 

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="Major changes including:&#10;- New Logo and Icon for game&#10;- New Loading text&#10;- New Font (matches logo)&#10;- Window is freely resizable and doesn't break the game!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/LoadResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/LoadResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/scenes/Loading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/scenes/Loading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/Background.png" afterDir="false" />
+    <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="GameGUI background and button changes. Linear gradient was for testing.">
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,11 +95,20 @@
       <option name="project" value="LOCAL" />
       <updated>1710646858918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="GameGUI background and button changes. Linear gradient was for testing.">
+      <option name="closed" value="true" />
+      <created>1710763040140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710763040140</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Major changes including:&#10;- New Logo and Icon for game&#10;- New Loading text&#10;- New Font (matches logo)&#10;- Window is freely resizable and doesn't break the game!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major changes including:&#10;- New Logo and Icon for game&#10;- New Loading text&#10;- New Font (matches logo)&#10;- Window is freely resizable and doesn't break the game!" />
+    <MESSAGE value="GameGUI background and button changes. Linear gradient was for testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="GameGUI background and button changes. Linear gradient was for testing." />
   </component>
 </project>
