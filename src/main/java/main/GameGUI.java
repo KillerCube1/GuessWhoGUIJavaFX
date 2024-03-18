@@ -4,6 +4,9 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -49,6 +52,46 @@ public class GameGUI extends Application {
             buttonContainer.getChildren().add(button);
         }
 
+
+        MenuItem menuItem1 = new MenuItem("Menu Item 1");
+        MenuItem menuItem2 = new MenuItem("Menu Item 2");
+        MenuItem menuItem3 = new MenuItem("Pause Game");
+        MenuItem menuItem4 = new MenuItem("Settings");
+        MenuItem menuItem5 = new MenuItem("Exit Game");
+
+        menuItem1.setOnAction(_ -> {
+            System.out.println("Menu Item 1 clicked");
+        });
+
+        menuItem2.setOnAction(_ -> {
+            System.out.println("Menu Item 2 clicked");
+        });
+
+        menuItem3.setOnAction(_ -> {
+            System.out.println("Pause Game clicked");
+            //TODO: Display a pause screen title mainly for single player
+        });
+
+        menuItem4.setOnAction(_ -> {
+            System.out.println("Settings!");
+            //TODO: Open new stage to allow for different settings during game possibly change background color and stuff idk
+        });
+
+        menuItem5.setOnAction(_ -> {
+            System.out.println("Goodbye!");
+            primaryStage.close();
+            //TODO: Show a simple stage of exiting the game!
+        });
+
+        Menu menu = new Menu("Options");
+        menu.getItems().addAll(menuItem1, menuItem2, menuItem3, menuItem4, menuItem5);
+
+        MenuBar menuBar = new MenuBar();
+        menuBar.getMenus().add(menu);
+
+        VBox menuBox = new VBox(menuBar);
+
+        borderPane.setTop(menuBox);
 
 
         Scene scene = new Scene(borderPane, 1600, 900);

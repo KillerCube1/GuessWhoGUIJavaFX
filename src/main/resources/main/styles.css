@@ -1,7 +1,7 @@
 .root {
     -fx-background-image: url('Background.png');
     -fx-background-size: cover;
-    -fx-background-color:  #87CEEB;
+    -fx-background-color: #282828;
 }
 
 .styled-button {
@@ -25,11 +25,11 @@
     -fx-max-height: 40px;
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
-    -fx-background-color: #87CEEB;
+    -fx-background-color: #5EC8FF;
     -fx-text-alignment: center;
     -fx-alignment: center;
     -fx-font-size: 12px;
-    -fx-text-fill: white;
+    -fx-text-fill: black;
     -fx-cursor: hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 0);
     -fx-border-color: white;
