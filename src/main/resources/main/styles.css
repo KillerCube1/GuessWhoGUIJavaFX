@@ -19,28 +19,28 @@
 }
 
 .custom-button {
-    -fx-min-width: 130px;
-    -fx-min-height: 50px;
-    -fx-max-width: 130px;
-    -fx-max-height: 50px;
-    -fx-border-radius: 30px;
-    -fx-background-radius: 30px;
+    -fx-min-width: 120px;
+    -fx-min-height: 40px;
+    -fx-max-width: 120px;
+    -fx-max-height: 40px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
     -fx-background-color: #87CEEB;
     -fx-text-alignment: center;
     -fx-alignment: center;
-    -fx-font-size: 14px;
+    -fx-font-size: 12px;
     -fx-text-fill: white;
     -fx-cursor: hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 0);
     -fx-border-color: white;
     -fx-border-width: 3px;
-    -fx-padding: 10px 20px;
+    -fx-padding: 8px 16px;
 }
 
 .custom-button:hover  {
     -fx-background-color: linear-gradient(#87CEEB, #FFFFFF);
     -fx-text-fill: black;
     -fx-font-weight: bold;
-    -fx-font-size: 14px;
+    -fx-font-size: 13px;
 }
 

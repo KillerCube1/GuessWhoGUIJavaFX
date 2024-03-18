@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="GameGUI background and button changes. Linear gradient was for testing.">
+    <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="GameGUI background and button changes.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/GameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,12 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710763040140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GameGUI background and button changes.">
+      <option name="closed" value="true" />
+      <created>1710763196693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710763196693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Major changes including:&#10;- New Logo and Icon for game&#10;- New Loading text&#10;- New Font (matches logo)&#10;- Window is freely resizable and doesn't break the game!" />
     <MESSAGE value="GameGUI background and button changes. Linear gradient was for testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="GameGUI background and button changes. Linear gradient was for testing." />
+    <MESSAGE value="GameGUI background and button changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="GameGUI background and button changes." />
   </component>
 </project>

@@ -4,16 +4,15 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 
+//TODO: Set background color of screen when not turn to red in css.
+//TODO: Add Card images placeholders of some sort.
+//TODO: Add layout for menu bar or text chat area of some sort.
+//TODO: Change Background.png to original folder wasnt sure how to get it to work.
 public class GameGUI extends Application {
 
     public static void main(String[] args) {
@@ -52,7 +51,7 @@ public class GameGUI extends Application {
 
 
 
-        Scene scene = new Scene(borderPane, 1920, 1080);
+        Scene scene = new Scene(borderPane, 1600, 900);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
