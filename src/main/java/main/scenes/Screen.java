@@ -6,22 +6,13 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
 import main.MainApp;
 
-public class Screen extends Scene {
+public class Screen extends StackPane {
     public Screen(Parent parent) {
         super(parent);
     }
 
-    public Scene start() {
+    public Parent start() {
         return null;
     }
 
-    void setSceneControls(Scene scene) {
-        // Full screen when F11 is pressed
-        scene.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.F11) {
-                MainApp.getStage().setFullScreen(!MainApp.getStage().isFullScreen());
-            }
-        });
-
-    }
 }

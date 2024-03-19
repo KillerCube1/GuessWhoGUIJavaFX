@@ -22,44 +22,34 @@ import main.MainApp;
 import main.elements.Fonts;
 import main.elements.ScrollingBackground;
 
-import java.util.Objects;
+public class Testing extends Screen {
 
-public class Loading extends Screen {
-
-    public Loading() {
+    public Testing() {
         super(new StackPane());
     }
 
     @Override
     public Parent start() {
         // Set up elements
-        Image logoImage = new Image(Objects.requireNonNull(Loading.class.getResourceAsStream("/images/Logo.png")));
+        Image logoImage = new Image(Testing.class.getResourceAsStream("/images/Logo.png"));
         ImageView logo = new ImageView(logoImage);
         logo.setPreserveRatio(true);
         logo.fitWidthProperty().bind(MainApp.getStage().widthProperty().multiply(0.5));
         logo.fitHeightProperty().bind(MainApp.getStage().heightProperty().multiply(0.5));
 
-        Text loadingText = new Text("Loading Game...");
+        Text loadingText = new Text("YES SIRRR!!!!");
         loadingText.setFill(Color.WHITE);
         loadingText.fontProperty().bind(Bindings.createObjectBinding(() -> {
             double size = getWidth() / 40; // Adjust the divisor to control the shrinking rate
             return Fonts.loadFont("/fonts/obelixprob-cyr.ttf", size);
         }, widthProperty()));
 
-        Text resourceText = new Text("");
-        resourceText.setFill(Color.WHITE);
-        resourceText.fontProperty().bind(Bindings.createObjectBinding(() -> {
-            double size = getWidth() / 100; // Adjust the divisor to control the shrinking rate
-            return Fonts.loadFont("/fonts/obelixpro-cyr.ttf", size);
-        }, widthProperty()));
-
         DropShadow dropShadow = new DropShadow();
         dropShadow.setColor(Color.WHITE);
         dropShadow.setRadius(3);
         loadingText.setEffect(dropShadow);
-        resourceText.setEffect(dropShadow);
 
-        VBox loadingLayout = new VBox(logo, loadingText, resourceText);
+        VBox loadingLayout = new VBox(logo, loadingText);
         loadingLayout.setAlignment(Pos.CENTER);
         loadingLayout.setOpacity(0);
 
@@ -98,9 +88,6 @@ public class Loading extends Screen {
         fadeInTransition.play();
         fadeInTransition.setOnFinished(_ -> {
             showLogo.play();
-            showLogo.setOnFinished(_ -> {
-                LoadResources.beginLoading(resourceText); // Begin loading resources for game
-            });
         });
 
         return this;

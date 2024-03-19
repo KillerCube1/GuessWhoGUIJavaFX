@@ -16,7 +16,7 @@ public class LoadResources {
                 updateLoadingText(loadingText, "BOOTKAS TAKING ALL RESOURCES");
                 Thread.sleep(1000);
 
-                Platform.runLater(() -> MainApp.setScreen("Loading"));
+                Platform.runLater(() -> MainApp.setScreen("Testing"));
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
