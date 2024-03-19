@@ -36,7 +36,6 @@ public class ScrollingBackground extends Rectangle {
                         true
                 );
 
-                // Fill rectangle with update image pattern
                 setFill(imagePattern);
 
                 // Increment
