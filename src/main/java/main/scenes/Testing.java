@@ -17,7 +17,6 @@ import javafx.scene.paint.Stop;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import main.LoadResources;
 import main.MainApp;
 import main.elements.Fonts;
 import main.elements.ScrollingBackground;
