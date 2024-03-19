@@ -57,7 +57,7 @@ public class MainApp extends Application {
     public static void setScreen(String scene) {
         Screen screen = switch (scene) {
             case "Loading" -> new Loading();
-            case "Testing" -> new Testing();
+            case "MainMenu" -> new MainMenu();
             default -> new Default();
         };
         mainStage.getScene().setRoot(screen);
