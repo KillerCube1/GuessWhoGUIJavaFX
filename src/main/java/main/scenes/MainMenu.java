@@ -3,6 +3,8 @@ package main.scenes;
 import javafx.beans.binding.Bindings;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
+import javafx.scene.effect.ColorAdjust;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -87,14 +89,31 @@ public class MainMenu extends Screen {
         // Set up play button
         Image playImage = new Image(Objects.requireNonNull(Loading.class.getResourceAsStream("/images/Play_Image.jpg")));
         ImageView playButtonImage = new ImageView(playImage);
+        playButtonImage.setPreserveRatio(true);
         playButtonImage.fitWidthProperty().bind(MainApp.getStage().widthProperty().multiply(0.5));
         playButtonImage.fitHeightProperty().bind(MainApp.getStage().heightProperty().multiply(0.5));
+        ColorAdjust colorAdjust = new ColorAdjust();
+        colorAdjust.setBrightness(-0.3);
+        playButtonImage.setEffect(colorAdjust);
+
+        Rectangle playButtonStroke = new Rectangle();
+        playButtonStroke.setFill(null);
+        playButtonStroke.setStroke(Color.WHITE);
+        playButtonStroke.setStrokeWidth(5);
+        playButtonStroke.widthProperty().bind(playButtonImage.widthProperty());
+        playButtonStroke.heightProperty().bind(playButtonImage.heightProperty());
+
+        DropShadow dropShadow = new DropShadow();
+        dropShadow.setColor(Color.WHITE);
+        dropShadow.setRadius(3);
+        playButtonStroke.setEffect(dropShadow);
 
         getChildren().add(new ScrollingBackground(MainApp.getStage(), "/images/Background.png", 1.5));
         getChildren().addAll(BackTopBar, BackBottomBar);
         getChildren().addAll(TopBar, BottomBar);
-        getChildren().add(logo);
-        getChildren().add(menuTextPane);
+        getChildren().addAll(logo, menuTextPane);
+        getChildren().add(playButtonStroke);
+        getChildren().add(playButtonImage);
 
         return this;
     }
