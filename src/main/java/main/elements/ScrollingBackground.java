@@ -50,6 +50,8 @@ public class ScrollingBackground extends Rectangle {
         setImageSize(size);
     }
 
+
+
     public void setImageSize(double size) {
         this.imageSize = size;
     }

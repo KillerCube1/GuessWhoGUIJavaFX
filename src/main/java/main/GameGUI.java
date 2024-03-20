@@ -16,7 +16,7 @@ import javafx.scene.paint.Stop;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-
+import main.elements.ScrollingBackground;
 import java.util.Objects;
 
 public class GameGUI extends Application {
@@ -32,6 +32,7 @@ public class GameGUI extends Application {
         primaryStage.setTitle("Guess Who Game");
 
         StackPane root = new StackPane();
+        root.getChildren().add(new ScrollingBackground(primaryStage, "/images/Background.png", 1.5));
         gameScene = new Scene(root);
         primaryStage.setScene(gameScene);
         setSceneControls(primaryStage);
