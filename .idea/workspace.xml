@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="GameGUI background and button changes.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/GameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/scenes/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/scenes/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -74,7 +74,7 @@ public class MainMenu extends Screen {
             double size = getWidth() / 40; // Adjust the divisor to control the shrinking rate
             return Fonts.loadFont("/fonts/obelixprob-cyr.ttf", size);
         }, widthProperty()));
-        StackPane.setAlignment(loadingText, Pos.TOP_LEFT);
+
 
         getChildren().add(new ScrollingBackground(MainApp.getStage(), "/main/Background.png", 1.5));
         getChildren().addAll(BackTopBar, BackBottomBar);

@@ -2,11 +2,12 @@ package main;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.CycleMethod;
@@ -18,13 +19,9 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-import static javafx.scene.paint.Color.WHITE;
-
-//TODO: Set background color of screen when not turn to red in css.
-//TODO: Add Card images placeholders of some sort.
-//TODO: Add layout for menu bar or text chat area of some sort.
-//TODO: Change Background.png to original folder wasnt sure how to get it to work.
 public class GameGUI extends Application {
+
+    private Scene gameScene;
 
     public static void main(String[] args) {
         launch(args);
@@ -32,28 +29,45 @@ public class GameGUI extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        VBox buttonContainer = new VBox(10);
-        buttonContainer.setPadding(new Insets(50));
+        primaryStage.setTitle("Guess Who Game");
 
-        BorderPane borderPane = new BorderPane();
-        borderPane.setRight(buttonContainer);
+        StackPane root = new StackPane();
+        gameScene = new Scene(root);
+        primaryStage.setScene(gameScene);
+        setSceneControls(primaryStage);
 
-        HBox hboxTop = addHBoxWithLogo();
-        borderPane.setTop(hboxTop);
-
-        HBox hboxBottom = addHBoxWithText();
-        borderPane.setBottom(hboxBottom);
-
-        Scene scene = new Scene(borderPane, 1920, 1080);
-        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-        primaryStage.setScene(scene);
+        primaryStage.setFullScreen(true);
         primaryStage.show();
+
+        root.getChildren().add(createContent());
+        gameScene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+    }
+
+    private void setSceneControls(Stage stage) {
+        gameScene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.F11) {
+                stage.setFullScreen(!stage.isFullScreen());
+            }
+        });
     }
 
 
-    public static HBox addHBox() {
+    private Parent createContent() {
+        StackPane root = new StackPane();
 
+        HBox hboxTop = addHBoxWithLogo();
 
+        HBox hboxBottom = addHBoxWithText();
+
+        BorderPane borderPane = new BorderPane();
+        borderPane.setTop(hboxTop);
+        borderPane.setBottom(hboxBottom);
+
+        root.getChildren().add(borderPane);
+        return root;
+    }
+
+    private HBox addHBox() {
         Color color1 = Color.rgb(150, 4, 19); // #bc0413
         Color color2 = Color.rgb(239, 24, 41);  // #ef1829
 
@@ -72,7 +86,7 @@ public class GameGUI extends Application {
         return hbox;
     }
 
-    public static HBox addHBoxWithLogo() {
+    private HBox addHBoxWithLogo() {
         HBox hbox = addHBox();
 
         Image image = new Image(Objects.requireNonNull(GameGUI.class.getResourceAsStream("/images/Logo.png")));
@@ -80,28 +94,25 @@ public class GameGUI extends Application {
         imageView.setFitWidth(90);
         imageView.setPreserveRatio(true);
 
-
-        HBox.setHgrow(imageView, javafx.scene.layout.Priority.NEVER);
+        HBox.setHgrow(imageView, Priority.NEVER);
         imageView.setManaged(false);
         hbox.getChildren().add(imageView);
 
         return hbox;
     }
 
-    public static HBox addHBoxWithText() {
+    private HBox addHBoxWithText() {
         HBox hbox = addHBox();
+
         Label character = new Label("Your Card: ");
-        character.setAlignment(Pos.CENTER_RIGHT);
         character.setTextFill(Color.WHITE);
-        character.setPadding(new Insets(0, 40, 0, 0));
 
         Font font = Font.font("Arial", FontWeight.BOLD, 26);
         character.setFont(font);
 
-        HBox.setHgrow(character, javafx.scene.layout.Priority.NEVER);
-        character.setManaged(false);
+        character.setMaxWidth(Region.USE_PREF_SIZE);
+
         hbox.getChildren().add(character);
         return hbox;
     }
-
 }
