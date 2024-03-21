@@ -63,5 +63,4 @@ public class MainApp extends Application {
         mainStage.getScene().setRoot(screen);
         screen.start();
     }
-
 }

@@ -53,18 +53,19 @@ public class GameGUI extends Application {
         });
     }
 
-
     private Parent createContent() {
         StackPane root = new StackPane();
 
         HBox hboxTop = addHBoxWithLogo();
 
-        HBox hboxBottom = addHBoxWithText();
+        HBox hboxBottomText = addHBoxWithText();
+        Pane paneBottomImage = addPaneWithImage();
+
+        hboxBottomText.getChildren().add(paneBottomImage);
 
         BorderPane borderPane = new BorderPane();
         borderPane.setTop(hboxTop);
-        borderPane.setBottom(hboxBottom);
-
+        borderPane.setBottom(hboxBottomText);
         root.getChildren().add(borderPane);
         return root;
     }
@@ -124,5 +125,25 @@ public class GameGUI extends Application {
         });
 
         return hbox;
+    }
+
+    private Pane addPaneWithImage() {
+        Pane pane = new Pane();
+        pane.setStyle("-fx-background-color: transparent;");
+
+        Image image = new Image(Objects.requireNonNull(GameGUI.class.getResourceAsStream("/images/cards/Card_Back.png")));
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(60);
+        imageView.setPreserveRatio(true);
+        imageView.setRotate(-5);
+
+        imageView.setLayoutX(-15);
+        imageView.setLayoutY(-5);
+
+        pane.setPrefSize(imageView.getFitWidth() + 60, imageView.getFitHeight() + 100);
+
+        pane.getChildren().addAll(imageView);
+
+        return pane;
     }
 }
