@@ -2,6 +2,7 @@ package main;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -104,16 +105,24 @@ public class GameGUI extends Application {
 
     private HBox addHBoxWithText() {
         HBox hbox = addHBox();
+        hbox.setAlignment(Pos.CENTER_RIGHT);
 
         Label character = new Label("Your Card: ");
         character.setTextFill(Color.WHITE);
 
-        Font font = Font.font("Arial", FontWeight.BOLD, 26);
+        Font font = Font.font("Times New Roman Bold", FontWeight.BOLD, 26);
         character.setFont(font);
 
-        character.setMaxWidth(Region.USE_PREF_SIZE);
+        character.setMaxWidth(Double.MAX_VALUE);
+        HBox.setHgrow(character, Priority.ALWAYS);
 
         hbox.getChildren().add(character);
+        hbox.widthProperty().addListener((_, _, newVal) -> {
+            double spacePercentage = 0.8;
+            double padding = newVal.doubleValue() * spacePercentage;
+            hbox.setPadding(new Insets(15, 0, 15, padding));
+        });
+
         return hbox;
     }
 }
