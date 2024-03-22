@@ -7,8 +7,6 @@
     <list default="true" id="b48771cb-ea6b-48d7-8f10-50aa88c62936" name="Changes" comment="Continuing the work of the Main Menu and the main play button. This code does contain an error but I am kind of on a time crunch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/GameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Cards/Card_Back.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/cards/Card_Back.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -23,6 +23,7 @@ import java.util.Objects;
 public class GameGUI extends Application {
 
     private Scene gameScene;
+    private static double spacePercentage = 0.85;
 
     public static void main(String[] args) {
         launch(args);
@@ -49,6 +50,10 @@ public class GameGUI extends Application {
         gameScene.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.F11) {
                 stage.setFullScreen(!stage.isFullScreen());
+                spacePercentage = 0.8;
+            }
+            else{
+                spacePercentage = 0.85;
             }
         });
     }
@@ -119,11 +124,9 @@ public class GameGUI extends Application {
 
         hbox.getChildren().add(character);
         hbox.widthProperty().addListener((_, _, newVal) -> {
-            double spacePercentage = 0.8;
             double padding = newVal.doubleValue() * spacePercentage;
-            hbox.setPadding(new Insets(15, 0, 15, padding));
+            hbox.setPadding(new Insets(0, 0, 0, padding));
         });
-
         return hbox;
     }
 
